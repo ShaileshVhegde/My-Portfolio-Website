@@ -4,8 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { personalInfo } from "@/data/personalInfo";
 import { Cpu, Lock, ChevronRight, ArrowDown } from "lucide-react";
-import { LinkedInLogo, GitHubLogo, InstagramLogo, GmailLogo } from "../ui/BrandLogos";
-
+import Image from "next/image";
 // Typing effect hook
 function useTypingEffect(text: string, speed = 40) {
   const [displayed, setDisplayed] = useState("");
@@ -77,7 +76,6 @@ export default function Hero() {
   const [roleIndex, setRoleIndex] = useState(0);
   const [bootStep, setBootStep] = useState(0);
   const [showCursor, setShowCursor] = useState(true);
-  const [isCoreHovered, setIsCoreHovered] = useState(false);
   const typedRole = useTypingEffect(personalInfo.roles[roleIndex], 50);
   
   // Mouse parallax for hero visuals
@@ -239,143 +237,47 @@ export default function Hero() {
             </motion.div>
           </div>
 
-          {/* RIGHT: High Performance Optimized Social Orbit System */}
+          {/* RIGHT: High Performance Profile Image */}
           <motion.div
             style={{ rotateX: rx, rotateY: ry, transformStyle: "preserve-3d" }}
             className="flex flex-col items-center justify-center relative h-[350px] md:h-[500px] lg:h-[600px] w-full will-change-transform"
           >
-            {/* Ambient Background Glow (Optimized) */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] aspect-square bg-cyan-500/5 rounded-full blur-[80px] pointer-events-none" />
+            {/* Ambient Background Glow */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60%] aspect-square bg-cyan-500/20 rounded-full blur-[100px] pointer-events-none" />
             
-            <div className="relative flex items-center justify-center w-full h-full max-w-[300px] md:max-w-[500px] lg:max-w-none">
-              {/* Radial Glow Trails (Optimized Rotation) */}
+            <div className="relative flex items-center justify-center w-full h-full max-w-[280px] md:max-w-[380px] lg:max-w-[420px]">
               <motion.div
-                animate={{ rotate: 360 }}
-                transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
-                className="absolute rounded-full border border-cyan-500/10 w-[110%] aspect-square max-w-[450px] will-change-transform"
-              />
-              <motion.div
-                animate={{ rotate: -360 }}
-                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                className="absolute rounded-full border border-blue-500/10 border-dashed w-[85%] aspect-square max-w-[350px] will-change-transform"
-              />
-              
-              {/* Central AI Core / DevSecOps Hub */}
-              <motion.div
-                onMouseEnter={() => setIsCoreHovered(true)}
-                onMouseLeave={() => setIsCoreHovered(false)}
-                whileHover={{ scale: 1.05 }}
-                className="relative z-30 group cursor-pointer will-change-transform"
+                animate={{ y: [-10, 10, -10] }}
+                transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+                className="relative z-30 group will-change-transform w-full aspect-[4/5] sm:aspect-square md:aspect-[4/5] lg:aspect-[3/4]"
               >
-                <motion.div
-                  animate={{ 
-                    boxShadow: isCoreHovered 
-                      ? "0 0 80px rgba(6,182,212,0.6)" 
-                      : "0 0 30px rgba(6,182,212,0.2)"
-                  }}
-                  transition={{ duration: 0.3 }}
-                  className="w-24 h-24 md:w-32 md:h-32 lg:w-44 lg:h-44 flex items-center justify-center bg-gradient-to-br from-surface to-charcoal border-2 border-cyan-400/50 rounded-full backdrop-blur-xl relative overflow-hidden"
-                >
-                  <div className="absolute inset-0 rounded-full bg-cyan-500/10 animate-pulse" />
-                  <div className="absolute inset-2 border border-white/5 rounded-full animate-[spin_8s_linear_infinite]" />
-                  <Cpu className="w-10 h-10 md:w-14 md:h-14 lg:w-20 lg:h-20 text-cyan-400 drop-shadow-[0_0_15px_rgba(34,211,238,0.6)]" />
-                  
-                  {/* Internal scanlines effect (Optimized) */}
-                  <div className="absolute inset-0 rounded-full overflow-hidden pointer-events-none opacity-10">
-                    <div className="w-full h-1 bg-cyan-500 animate-[scan_1.5s_linear_infinite]" />
-                  </div>
-                </motion.div>
+                {/* Decorative Tech Frame */}
+                <div className="absolute inset-0 rounded-3xl border-2 border-cyan-500/30 bg-gradient-to-br from-cyan-500/10 to-purple-500/10 backdrop-blur-sm -rotate-3 transition-transform duration-500 group-hover:rotate-0" />
+                <div className="absolute inset-0 rounded-3xl border-2 border-purple-500/30 bg-gradient-to-tl from-cyan-500/10 to-purple-500/10 backdrop-blur-sm rotate-3 transition-transform duration-500 group-hover:rotate-0" />
                 
-                {/* Core Label */}
-                <div className="absolute -bottom-10 left-1/2 -translate-x-1/2 text-center">
-                  <p className="font-mono text-[8px] lg:text-[10px] text-cyan-400 font-bold tracking-[0.3em] uppercase">Control_Hub_v2.0</p>
-                  <p className="font-mono text-[6px] lg:text-[8px] text-slate-500 tracking-widest mt-1">AI_CORE_ACTIVE</p>
+                {/* Image Container */}
+                <div className="absolute inset-0 rounded-3xl overflow-hidden border border-white/10 bg-surface shadow-[0_0_50px_rgba(6,182,212,0.15)] group-hover:shadow-[0_0_80px_rgba(6,182,212,0.3)] transition-all duration-500 flex items-center justify-center">
+                  <Image
+                    src="/IMG_20260330_205004_223.webp"
+                    alt={`${personalInfo.name} Profile`}
+                    fill
+                    priority
+                    sizes="(max-width: 768px) 280px, (max-width: 1024px) 380px, 420px"
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                  {/* Overlay scanlines */}
+                  <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[length:100%_4px] pointer-events-none opacity-50" />
                 </div>
+                
+                {/* Corner Accents */}
+                <div className="absolute -top-2 -left-2 w-6 h-6 border-t-2 border-l-2 border-cyan-400" />
+                <div className="absolute -top-2 -right-2 w-6 h-6 border-t-2 border-r-2 border-cyan-400" />
+                <div className="absolute -bottom-2 -left-2 w-6 h-6 border-b-2 border-l-2 border-cyan-400" />
+                <div className="absolute -bottom-2 -right-2 w-6 h-6 border-b-2 border-r-2 border-cyan-400" />
               </motion.div>
-
-              {/* Orbiting Social Media Nodes (High-Performance CSS Rotation + Framer Motion) */}
-              <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                <motion.div
-                  animate={{ rotate: 360 }}
-                  transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
-                  className="relative w-[85%] aspect-square max-w-[350px] will-change-transform"
-                >
-                  {[
-                    { name: "LinkedIn", icon: LinkedInLogo, color: "#0077b5", link: personalInfo.socials.linkedin, angle: 0 },
-                    { name: "GitHub", icon: GitHubLogo, color: "#ffffff", link: personalInfo.socials.github, angle: 90 },
-                    { name: "Instagram", icon: InstagramLogo, color: "#E4405F", link: personalInfo.socials.instagram, angle: 180 },
-                    { name: "Gmail", icon: GmailLogo, color: "#EA4335", link: `mailto:${personalInfo.email}`, angle: 270 },
-                  ].map((social) => (
-                    <div
-                      key={social.name}
-                      className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full pointer-events-none"
-                      style={{ transform: `rotate(${social.angle}deg)` }}
-                    >
-                      <motion.a
-                        href={social.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        animate={{
-                          rotate: -360,
-                          scale: isCoreHovered ? 1.1 : 1,
-                        }}
-                        transition={{
-                          rotate: { duration: 15, repeat: Infinity, ease: "linear" },
-                          scale: { duration: 0.2 }
-                        }}
-                        whileHover={{ scale: 1.25, filter: "brightness(1.2)" }}
-                        className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-auto flex flex-col items-center justify-center group"
-                      >
-                        <div className="relative flex items-center justify-center w-10 h-10 md:w-12 md:h-12 lg:w-16 lg:h-16 rounded-2xl bg-surface/90 backdrop-blur-xl border border-white/10 shadow-xl transition-all duration-200 group-hover:border-cyan-500/50 will-change-transform">
-                          <div 
-                            className={`absolute inset-0 rounded-2xl opacity-0 blur-md transition-opacity duration-200 group-hover:opacity-40 ${isCoreHovered ? 'opacity-20' : ''}`}
-                            style={{ backgroundColor: social.color }}
-                          />
-                          <div className="w-5 h-5 md:w-6 md:h-6 lg:w-8 lg:h-8 relative z-10">
-                            <social.icon />
-                          </div>
-                        </div>
-                        <motion.span 
-                          className="mt-2 font-mono text-[8px] lg:text-[10px] text-white/60 tracking-widest uppercase font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-200"
-                        >
-                          {social.name}
-                        </motion.span>
-                      </motion.a>
-                    </div>
-                  ))}
-                </motion.div>
-              </div>
-
-              {/* Decorative data streams (Lightweight) */}
-              {[...Array(2)].map((_, i) => (
-                <div
-                  key={i}
-                  className="absolute rounded-full border border-cyan-500/5 animate-[pulse_4s_linear_infinite]"
-                  style={{ 
-                    width: `${60 + i * 20}%`, 
-                    maxWidth: 200 + i * 100, 
-                    aspectRatio: '1/1',
-                    animationDelay: `${i * 2}s`
-                  }}
-                />
-              ))}
             </div>
 
-            {/* System Statistics Dashboard (Static Layout) */}
-            <div className="absolute bottom-5 left-0 right-0 flex justify-center gap-4 lg:gap-6 z-40">
-              {[
-                { label: "LINK_STATUS", value: "ESTABLISHED", color: "text-green-400" },
-                { label: "SIGNAL_STRENGTH", value: "MAX", color: "text-cyan-400" },
-                { label: "UPTIME", value: "100%", color: "text-blue-400" },
-              ].map((stat, si) => (
-                <div key={stat.label} className="text-center bg-surface/40 backdrop-blur-md px-3 lg:px-4 py-1.5 lg:py-2 rounded-lg border border-white/5 shadow-lg">
-                  <p className="font-mono text-[6px] lg:text-[8px] text-slate-500 font-bold tracking-widest mb-1">{stat.label}</p>
-                  <p className={`font-mono text-[8px] lg:text-[10px] font-black ${stat.color} tracking-wider`}>
-                    {stat.value}
-                  </p>
-                </div>
-              ))}
-            </div>
+
           </motion.div>
         </div>
       </div>
