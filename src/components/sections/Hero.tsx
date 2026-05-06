@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { personalInfo } from "@/data/personalInfo";
-import { Cpu, Lock, ChevronRight, ArrowDown } from "lucide-react";
+import { Cpu, Lock, ChevronRight, ArrowDown, Download } from "lucide-react";
 import Image from "next/image";
 // Typing effect hook
 function useTypingEffect(text: string, speed = 40) {
@@ -25,11 +25,14 @@ function useTypingEffect(text: string, speed = 40) {
 }
 
 // Magnetic button component
-function MagneticButton({ children, className, href, onClick }: {
+function MagneticButton({ children, className, href, onClick, download, target, rel }: {
   children: React.ReactNode;
   className?: string;
   href?: string;
   onClick?: (e: React.MouseEvent<HTMLAnchorElement>) => void;
+  download?: string | boolean;
+  target?: string;
+  rel?: string;
 }) {
   const ref = useRef<HTMLAnchorElement>(null);
   const x = useMotionValue(0);
@@ -58,6 +61,9 @@ function MagneticButton({ children, className, href, onClick }: {
       onMouseLeave={handleMouseLeave}
       whileTap={{ scale: 0.95 }}
       className={className}
+      download={download}
+      target={target}
+      rel={rel}
     >
       {children}
     </motion.a>
@@ -217,6 +223,16 @@ export default function Hero() {
               >
                 <Lock className="w-4 h-4" />
                 Establish Uplink
+              </MagneticButton>
+              <MagneticButton
+                href="/ShaileshHegde.pdf"
+                download="Shailesh_Hegde_Resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group px-6 py-3 border border-cyan-500/30 hover:border-cyan-400 bg-cyan-500/10 hover:bg-cyan-500/20 text-cyan-400 hover:text-cyan-300 font-mono text-sm uppercase tracking-wider rounded transition-all flex items-center gap-2 shadow-[0_0_15px_rgba(6,182,212,0.15)] hover:shadow-[0_0_25px_rgba(6,182,212,0.3)]"
+              >
+                <Download className="w-4 h-4" />
+                Download Resume
               </MagneticButton>
             </motion.div>
 

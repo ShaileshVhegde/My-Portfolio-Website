@@ -2,7 +2,7 @@
 
 import { useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Terminal, Send, CheckCircle2, AlertCircle, Lock, ShieldCheck, Mail, Zap } from "lucide-react";
+import { Terminal, Send, CheckCircle2, AlertCircle, Lock, ShieldCheck, Mail, Zap, Download } from "lucide-react";
 import { personalInfo } from "@/data/personalInfo";
 import TiltCard from "@/components/ui/TiltCard";
 
@@ -89,6 +89,19 @@ export default function Contact() {
                       <p className="text-[11px] text-green-500 font-bold">READY_FOR_UPLINK</p>
                     </div>
                   </div>
+                </div>
+
+                <div className="mt-6 pt-6 border-t border-white/10 flex justify-center">
+                  <a
+                    href="/ShaileshHegde.pdf"
+                    download="Shailesh_Hegde_Resume.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center gap-2 w-full px-4 py-3 bg-cyan-500/10 hover:bg-cyan-500/20 border border-cyan-500/30 rounded text-cyan-400 font-mono text-[10px] uppercase tracking-widest transition-all hover:shadow-[0_0_15px_rgba(6,182,212,0.3)]"
+                  >
+                    <Download className="w-4 h-4" />
+                    Download_Resume.pdf
+                  </a>
                 </div>
 
                 <div className="mt-8 pt-6 border-t border-white/10">
