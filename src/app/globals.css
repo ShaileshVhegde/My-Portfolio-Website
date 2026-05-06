@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #050810;
+  --color-surface: #0f172a;
+  --color-surface-hover: #1e293b;
+  --color-charcoal: #111827;
+  --color-graphite: #334155;
+  --color-foreground: #ffffff;
+  --color-text-dim: #94a3b8;
+  
+  --color-electricblue: #3b82f6;
+  --color-cyan: #22d3ee;
+  --color-neongreen: #10b981;
+  --color-securityred: #f43f5e;
+  --color-purpleglow: #a78bfa;
+
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+::selection {
+  background-color: var(--color-cyan);
+  color: #000;
+}
+
+/* Scrollbar styles for futuristic look */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-graphite);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-electricblue);
+}
+
+/* Global utility classes for glow and glassmorphism */
+@utility glass-panel {
+  background: rgba(10, 15, 26, 0.8);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+@utility glow-border-cyan {
+  border-color: rgba(6, 182, 212, 0.5);
+  box-shadow: 0 0 10px rgba(6, 182, 212, 0.2);
+}
+
+@utility glow-border-green {
+  border-color: rgba(34, 197, 94, 0.5);
+  box-shadow: 0 0 10px rgba(34, 197, 94, 0.2);
+}
+
+@utility text-glow-cyan {
+  text-shadow: 0 0 8px rgba(6, 182, 212, 0.6);
+}
+
+@utility text-glow-green {
+  text-shadow: 0 0 8px rgba(34, 197, 94, 0.6);
+}
+
+@utility scanline {
+  position: relative;
+}
+.scanline::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(
+    rgba(18, 16, 16, 0) 50%,
+    rgba(0, 0, 0, 0.25) 50%
+  );
+  background-size: 100% 4px;
+  z-index: 50;
+  pointer-events: none;
+}
