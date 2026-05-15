@@ -1,12 +1,12 @@
 export const personalInfo = {
   name: "SHAILESH HEGDE",
   roles: [
-    "DevSecOps Engineer",
+    "Aspiring DevSecOps Engineer",
     "Cloud Security Enthusiast",
     "AI Security Learner",
     "Backend Developer",
     "Python Developer",
-    "Full Stack Developer"
+    "Full Stack Developer with AI"
   ],
   location: "Dharwad, India 580008",
   phone: "+91 9113962539",

@@ -161,7 +161,7 @@ export default function Contact() {
                       {/* Name Input */}
                       <div className="space-y-3">
                         <label className={`font-mono text-[10px] uppercase tracking-[0.3em] transition-colors ${activeField === "name" ? "text-cyan-400" : "text-gray-500"}`}>
-                          01_IDENT_LABEL
+                          01_IDENT_LABEL (Name)
                         </label>
                         <div className="relative group">
                           <input
@@ -180,7 +180,7 @@ export default function Contact() {
                       {/* Email Input */}
                       <div className="space-y-3">
                         <label className={`font-mono text-[10px] uppercase tracking-[0.3em] transition-colors ${activeField === "email" ? "text-cyan-400" : "text-gray-500"}`}>
-                          02_RETURN_PATH
+                          02_RETURN_PATH (Email)
                         </label>
                         <div className="relative group">
                           <input
@@ -200,7 +200,7 @@ export default function Contact() {
                     {/* Message Input */}
                     <div className="space-y-3">
                       <label className={`font-mono text-[10px] uppercase tracking-[0.3em] transition-colors ${activeField === "message" ? "text-cyan-400" : "text-gray-500"}`}>
-                        03_DATA_PAYLOAD
+                        03_DATA_PAYLOAD (Message)
                       </label>
                       <div className="relative group">
                         <textarea
@@ -241,7 +241,7 @@ export default function Contact() {
                               className="flex items-center gap-3"
                             >
                               <Send className="w-4 h-4 group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform" />
-                              INIT_TRANSMISSION
+                              INIT_TRANSMISSION 
                             </motion.div>
                           )}
                           {formState === "sending" && (

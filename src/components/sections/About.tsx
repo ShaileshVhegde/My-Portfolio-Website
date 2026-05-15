@@ -9,8 +9,8 @@ import {
 import TiltCard from "@/components/ui/TiltCard";
 
 const systemStats = [
-  { label: "Core Archetype", value: "Cloud Security Engineer", icon: Cpu,         color: "text-cyan-400",   bg: "bg-cyan-500/10",   hover: "group-hover/stat:bg-cyan-500 group-hover/stat:text-black" },
-  { label: "System Uptime",  value: "2+ Years Experience",    icon: CheckCircle2, color: "text-green-400",  bg: "bg-green-500/10",  hover: "group-hover/stat:bg-green-500 group-hover/stat:text-black" },
+  { label: "Core Archetype", value: "Aspiring DevSecOps Engineer", icon: Cpu,         color: "text-cyan-400",   bg: "bg-cyan-500/10",   hover: "group-hover/stat:bg-cyan-500 group-hover/stat:text-black" },
+  { label: "System Uptime",  value: "Immediately",    icon: CheckCircle2, color: "text-green-400",  bg: "bg-green-500/10",  hover: "group-hover/stat:bg-green-500 group-hover/stat:text-black" },
   { label: "Network Access", value: "Level 4 Clearance",      icon: Network,      color: "text-purple-400", bg: "bg-purple-500/10", hover: "group-hover/stat:bg-purple-500 group-hover/stat:text-black" },
   { label: "Data Integrity", value: "99.9% Reliable",         icon: Database,     color: "text-blue-400",   bg: "bg-blue-500/10",   hover: "group-hover/stat:bg-blue-500 group-hover/stat:text-black" },
   { label: "Market Awareness",value: "Analytical Synergy",    icon: TrendingUp,   color: "text-yellow-400", bg: "bg-yellow-500/10", hover: "group-hover/stat:bg-yellow-500 group-hover/stat:text-black" },

@@ -1,13 +1,28 @@
 export const projectsData = [
+    {
+    id: "mythings",
+    title: "My Things",
+    subtitle: "MERN Stack Application",
+    description: "A full-stack application for managing personal items, built to demonstrate proficiency in the MERN stack with CRUD operations and user authentication.",
+    techStack: ["MongoDB", "Express", "React", "Node.js","Cloudinary","LLM APIs","JWT and RBAC", "Google OAuth"],
+    status: "Completed",
+    deploymentUrl: "https://my-things-nine.vercel.app",
+    githubUrl: "https://github.com/ShaileshVhegde/My-Things",
+    highlights: [
+      "Secure user authentication (JWT).",
+      "Full CRUD functionality for item management.",
+      "REST API integration with React frontend."
+    ]
+  },
   {
     id: "udgosh",
     title: "UDGOSH 3.0",
     subtitle: "College Event Web Platform",
     description: "A comprehensive web platform developed for managing and showcasing the college event UDGOSH 3.0. Features include event registration, scheduling, and live updates.",
-    techStack: ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS"],
+    techStack: ["React", "Node.js", "Google Forms", "Tailwind CSS"],
     status: "Deployed",
-    deploymentUrl: "#", // Update with real URL
-    githubUrl: "#", // Update with real URL
+    deploymentUrl: "https://klebcadwdudgosh3.vercel.app", // Update with real URL
+    githubUrl: "https://github.com/ShaileshVhegde/UDGOSH_3.0", // Update with real URL
     highlights: [
       "Streamlined event registration process.",
       "Real-time event scheduling updates.",
@@ -22,7 +37,7 @@ export const projectsData = [
     techStack: ["Figma", "UI/UX Design", "Wireframing", "Prototyping"],
     status: "Completed",
     deploymentUrl: "#", // Update with real URL if applicable
-    githubUrl: "#",
+    githubUrl: "https://github.com/ShaileshVhegde/UI-UX-design-project-",
     highlights: [
       "User-centric design approach.",
       "High-fidelity interactive prototypes.",
@@ -37,26 +52,11 @@ export const projectsData = [
     techStack: ["Python", "Machine Learning", "Flask", "Scikit-Learn"],
     status: "Alpha",
     deploymentUrl: "#",
-    githubUrl: "#",
+    githubUrl: "https://github.com/ShaileshVhegde/Phishing-Detection-tool-project-AI-Based",
     highlights: [
       "Machine learning model trained on phishing datasets.",
       "RESTful API built with Flask.",
       "Basic frontend for URL testing."
-    ]
-  },
-  {
-    id: "mythings",
-    title: "My Things",
-    subtitle: "MERN Stack Application",
-    description: "A full-stack application for managing personal items, built to demonstrate proficiency in the MERN stack with CRUD operations and user authentication.",
-    techStack: ["MongoDB", "Express", "React", "Node.js"],
-    status: "Completed",
-    deploymentUrl: "#",
-    githubUrl: "#",
-    highlights: [
-      "Secure user authentication (JWT).",
-      "Full CRUD functionality for item management.",
-      "REST API integration with React frontend."
     ]
   }
 ];
