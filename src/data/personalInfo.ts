@@ -11,7 +11,7 @@ export const personalInfo = {
   location: "Dharwad, India 580008",
   phone: "+91 9113962539",
   email: "shaileshhegdeofficial@gmail.com",
-  about: "Motivated, security-focused BCA 2nd-year student with foundational exposure to cloud computing, IAM, Linux, Git, APIs, and secure web technologies. Actively building skills in cloud security, RBAC, DevSecOps, Python, SQL, and Java. Seeking an internship or entry-level opportunity in Cybersecurity, Cloud Security, or DevSecOps to apply my skills, gain hands-on industry experience, and grow through real-world challenges.",
+  about: "Full-stack developer and BCA student (graduating 2027) with proven experience building and deploying production-grade web applications using React, Node.js, Python, and MongoDB. Delivered a college event platform serving 500+ student registrations and built AI-integrated tools for real-world use cases. Multi-time competition winner in both web development and cybersecurity. Currently focused on full-stack development with AI integration, while progressively building depth in DevOps practices and application security",
   education: [
     {
       degree: "Bachelor of Computer Applications",
