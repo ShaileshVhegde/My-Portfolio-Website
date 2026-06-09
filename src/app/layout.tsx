@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "SHAILESH HEGDE | DevSecOps Command Center",
+  title: "SHAILESH HEGDE",
   description: "DevSecOps & Cloud Security Portfolio of Shailesh Hegde. Futuristic engineering system dashboard.",
 };
 
