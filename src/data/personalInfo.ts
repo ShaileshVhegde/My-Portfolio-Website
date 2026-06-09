@@ -1,17 +1,18 @@
 export const personalInfo = {
   name: "SHAILESH HEGDE",
   roles: [
-    "Aspiring DevSecOps Engineer",
-    "Cloud Security Enthusiast",
-    "AI Security Learner",
+    "Full Stack Developer with AI",
     "Backend Developer",
-    "Python Developer",
-    "Full Stack Developer with AI"
+    "Cloud Security Enthusiast",
+    "Aspiring DevSecOps Engineer",
+    "AI Security Learner",
+    "Python Developer"
+   
   ],
   location: "Dharwad, India 580008",
   phone: "+91 9113962539",
   email: "shaileshhegdeofficial@gmail.com",
-  about: "Full-stack developer and BCA student (graduating 2027) with proven experience building and deploying production-grade web applications using React, Node.js, Python, and MongoDB. Delivered a college event platform serving 500+ student registrations and built AI-integrated tools for real-world use cases. Multi-time competition winner in both web development and cybersecurity. Currently focused on full-stack development with AI integration, while progressively building depth in DevOps practices and application security",
+  about: "Full Stack Developer with hands-on experience building and deploying AI-powered web applications using React, Node.js, Express.js, Python, and MongoDB. Experienced in designing scalable REST APIs, integrating AI capabilities into real-world products, and developing end-to-end solutions from frontend interfaces to backend services. Built multiple production-oriented applications focused on automation, intelligent recommendations, and workflow optimization. Passionate about creating impactful software products and continuously expanding expertise in modern application development and AI technologies",
   education: [
     {
       degree: "Bachelor of Computer Applications",
